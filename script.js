@@ -12,7 +12,7 @@ var songs = [];
 songs[0] = new Audio('https://dl.dropboxusercontent.com/s/k4s5959zucgljj4/bubblebobble.mp3');
 songs[1] = new Audio('http://www.flashkit.com/imagesvr_ce/flashkit/soundfx/Nature/Rain/Seamless-wildpeak-7685/Seamless-wildpeak-7685_hifi.mp3');
 songs[2] = new Audio('http://www.flashkit.com/imagesvr_ce/flashkit/soundfx/Nature/Wind/windchim-mRk-8425/windchim-mRk-8425_hifi.mp3');
-var currentSong = 10;
+var currentSong = 4;
 
 function board(sound){
 	console.log(sound);
@@ -25,14 +25,13 @@ function board(sound){
 }
 
 function radioClick(song){
-	if (currentSong != 10 && song == "none"){
-		songs[currentSong].loop = false;
+	if (currentSong != 4){
+		//songs[currentSong].loop = false;
 		songs[currentSong].pause();
 		songs[currentSong].currentTime = 0;
+		console.log(currentSong + " " + song.value);
 	}
-	else {
 		songs[song.value].loop = true;
 		songs[song.value].play();
 		currentSong = song.value;
-	}
 }
