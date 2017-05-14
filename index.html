@@ -19,14 +19,24 @@
 			<div class="nav link"><a href="http://michelelugo.com/CISC3610">Home</a></div>
 		</div>
 		<div class="title">
-			<h1>Lab 7<h1>
+			<h1>Lab 9<h1>
 			<h3>Michele Lugo</h3>
 		</div>
 	</div>
 	<div class="content">
 		<div class="textytext">
 			<h3>Sound Board Lab</h3>
-				<input type="button" name="startstop" id="startstop" value="Speak">
+				<input type="radio" name="song" value="4" onclick="radioClick('none')" checked="checked">None</input> | 
+				<input type="radio" name="song" onclick="radioClick(this)" value="0">Bubble Bobble</input> | 
+				<input type="radio" name="song" onclick="radioClick(this)" value="1">Rain</input> | 
+				<input type="radio" name="song" onclick="radioClick(this)" value="2">Chimes</input>
+				<hr>
+				<input type="button" id="startstop" value="Modem" onclick="board(0)">
+				<input type="button" id="startstop" value="Windows" onclick="board(1)">
+				<input type="button" id="startstop" value="Treasure" onclick="board(2)">
+				<input type="button" id="startstop" value="Picard" onclick="board(3)">
+				<input type="button" id="startstop" value="Drop" onclick="board(4)">
+
 		</div>
 	</div>
 	<div class="bottom">This is the bottom of the page. 2017.</div>
